@@ -47,7 +47,7 @@ class PokemonsListAdapter(
         private val nameTextView = view.findViewById<TextView>(R.id.textview__pokemoncard_name)
         private val frontImageView = view.findViewById<ImageView>(R.id.imageview__pokemoncard_front)
         private val backImageView = view.findViewById<ImageView>(R.id.imageview__pokemoncard_back)
-        private val card=view.findViewById<LinearLayout>(R.id.linearlayout__pokemoncard_fullcard)
+        private val card = view.findViewById<LinearLayout>(R.id.linearlayout__pokemoncard_fullcard)
 
         fun bind(
             pokemon: Pokemon,
@@ -61,7 +61,7 @@ class PokemonsListAdapter(
             backImageView.load(pokemon.sprites.back)
 
             card.setOnClickListener {
-                    onLaunchPokemonDescriptionFragment(pokemon.id)
+                onLaunchPokemonDescriptionFragment(pokemon.id)
             }
 
         }

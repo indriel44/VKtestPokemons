@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager
             .beginTransaction()
             .add(R.id.FrameLayout__FragmentHost, PokemonListFragment.newInstance())
-
             .commit()
     }
 

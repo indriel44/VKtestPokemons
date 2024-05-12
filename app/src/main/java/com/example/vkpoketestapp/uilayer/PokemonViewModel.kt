@@ -11,26 +11,26 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.channelFlow
 import kotlinx.coroutines.withContext
 
-class PokemonViewModel:ViewModel() {
+class PokemonViewModel : ViewModel() {
 
-    private val pokemonProvider=PokemonProvider()
-    private val IOdispatcher:CoroutineDispatcher= Dispatchers.IO
-    var currentPokemonId=1
+    private val pokemonProvider = PokemonProvider()
+    private val IOdispatcher: CoroutineDispatcher = Dispatchers.IO
+    var currentPokemonId = 1
 
     val pokemonList: Flow<List<Pokemon>> = channelFlow {
-        withContext(IOdispatcher){
+        withContext(IOdispatcher) {
             send(pokemonProvider.getPokemons())
         }
     }
 
     val pokemon: Flow<Pokemon> = channelFlow {
-        withContext(IOdispatcher){
+        withContext(IOdispatcher) {
             send(pokemonProvider.getPokemon(currentPokemonId))
         }
     }
 
     val pokemonDescription: Flow<Array<Any>> = channelFlow {
-        withContext(IOdispatcher){
+        withContext(IOdispatcher) {
             send(pokemonProvider.getPokemonDescription(currentPokemonId))
         }
     }

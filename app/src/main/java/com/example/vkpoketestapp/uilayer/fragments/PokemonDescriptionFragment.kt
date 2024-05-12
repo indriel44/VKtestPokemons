@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.ProgressBar
@@ -17,7 +16,6 @@ import com.example.vkpoketestapp.R
 import com.example.vkpoketestapp.datalayer.Pokemon
 import com.example.vkpoketestapp.uilayer.PokemonViewModel
 import kotlinx.coroutines.launch
-import org.w3c.dom.Text
 
 class PokemonDescriptionFragment : Fragment() {
 

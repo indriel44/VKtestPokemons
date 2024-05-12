@@ -6,7 +6,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
-import retrofit2.http.Query
 
 interface PokemonRepository {
 
@@ -14,10 +13,10 @@ interface PokemonRepository {
     suspend fun getResultList(): ListOfResults
 
     @GET("pokemon/{id}")
-    suspend fun getPokemon(@Path("id") id:Int): Pokemon
+    suspend fun getPokemon(@Path("id") id: Int): Pokemon
 
     @GET("characteristic/{id}")
-    suspend fun getPokemonDescription(@Path("id") id:Int): PokemonDescription
+    suspend fun getPokemonDescription(@Path("id") id: Int): PokemonDescription
 
 
     companion object {

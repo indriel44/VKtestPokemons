@@ -6,7 +6,7 @@ data class ListOfResults(
 
     @SerializedName("results")
     private val _results: List<Result>?,
-){
+) {
     val results: List<Result>
         get() = _results ?: emptyList()
 
