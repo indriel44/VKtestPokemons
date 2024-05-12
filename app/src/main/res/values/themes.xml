@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.VkPokeTestApp" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#FF59A782</item>
+        <item name="colorPrimaryDark">#FF59A782</item>
+        <item name="colorAccent">#FF6F74FF</item>
+    </style>
+
+    <style name="Theme.VkPokeTestApp" parent="Base.Theme.VkPokeTestApp" />
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearlayout__pokemoncard_fullcard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pokemon_card_background"
+    android:orientation="vertical"
+
+    android:layout_margin="4dp"
+
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageview__pokemoncard_front"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/pokemon_frontimage_background" />
+
+        <ImageView
+            android:id="@+id/imageview__pokemoncard_back"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/pokemon_backimage_background" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textview__pokemoncard_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="2dp"
+        android:paddingBottom="4dp"
+        android:fontFamily="@font/racing_sans_one"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:text="Snake" />
+</LinearLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_green"
+    android:clickable="true">
+
+
+    <ImageView
+        android:id="@+id/imageView__pokemondescription_front"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView__pokemondescription_back"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView__pokemondescription_front"
+        app:layout_constraintStart_toEndOf="@+id/imageView__pokemondescription_front"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="8dp"
+        android:paddingTop="232dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        android:src="@drawable/pokemon_card_background"
+        app:layout_constraintTop_toBottomOf="@+id/imageView__pokemondescription_front" />
+
+    <TextView
+        android:id="@+id/textview__pokemoncard_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/racing_sans_one"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        tools:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView__pokemoncard_error_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        tools:text="ERROR404" />
+
+    <TextView
+        android:id="@+id/textview__pokemoncard_description"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/raleway"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textview__pokemoncard_name"
+        app:layout_constraintTop_toBottomOf="@+id/textview__pokemoncard_name"
+        tools:text="Very intresting description" />
+
+    <TextView
+        android:id="@+id/textview__pokemoncard_types_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        android:text="@string/typesheader"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textview__pokemoncard_description"
+        app:layout_constraintTop_toBottomOf="@+id/textview__pokemoncard_name" />
+
+    <TextView
+        android:id="@+id/textview__pokemoncard_types"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/raleway"
+        android:maxLines="3"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textview__pokemoncard_types_txt"
+        app:layout_constraintTop_toBottomOf="@+id/textview__pokemoncard_types_txt"
+        tools:text="TextView" />
+
+    <TextView
+        android:id="@+id/textview__pokemoncard_stats_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        android:text="@string/main_characteristics_header"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textview__pokemoncard_description"
+        app:layout_constraintTop_toBottomOf="@+id/textview__pokemoncard_description" />
+
+    <TextView
+        android:id="@+id/textview__pokemoncard_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/raleway"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textview__pokemoncard_stats_txt"
+        app:layout_constraintTop_toBottomOf="@+id/textview__pokemoncard_stats_txt"
+        tools:text="TextView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="232dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar__pokemondescripion"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/light_green"
+        android:indeterminateTintMode="src_atop"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/exitButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/exit_button"
+        app:srcCompat="@drawable/exit_button_cross" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
